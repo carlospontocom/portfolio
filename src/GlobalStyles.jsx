@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
 *{
@@ -8,6 +8,12 @@ export const GlobalStyles = createGlobalStyle`
     font-size:16px;
     font-family:sans-serif;
     list-style: none;
-   }
-`
+   }`
+
+
+export const Wrapper = styled.div`
+    padding: 1em;
+    max-width:1140px;
+    margin:0 auto;
+`;
 

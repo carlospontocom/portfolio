@@ -1,10 +1,17 @@
- import Formulario from './components/Formulario/Formulario';
-  
+//  import Formulario from './components/Formulario/Formulario';
+
+  import {Wrapper} from "./GlobalStyles";
+
+
 function App() {
   return (
-    <div>
-    <Formulario/>
-    </div>
+    <>
+    <Wrapper>
+           <h4>
+            Tool developed
+          </h4>
+     </Wrapper>
+    </>
   );
 }
 
