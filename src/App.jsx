@@ -1,17 +1,11 @@
-//  import Formulario from './components/Formulario/Formulario';
-
-  import {Wrapper} from "./GlobalStyles";
-
+import Footer from "./components/Footer/Footer";
+ 
 
 function App() {
   return (
     <>
-    <Wrapper>
-           <h4>
-            Tool developed
-          </h4>
-     </Wrapper>
-    </>
+            <Footer/>
+     </>
   );
 }
 
