@@ -1,12 +1,26 @@
 import React from 'react';
 
-const Button = ({ text, bgcolor, color, onClick }) => {
-  const baseClasses = 'w-full font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300 px-4 py-2';
+const Button = ({ text, onClick, type = 'button' }) => {
+  const buttonClasses = `
+    px-8 py-3
+    bg-gradient-to-r from-blue-600 to-purple-600
+    text-white
+    font-bold
+    rounded-lg
+    shadow-lg
+    hover:shadow-xl
+    hover:scale-105
+    transform transition-all duration-300
+    focus:outline-none
+    focus:ring-4 focus:ring-purple-300
+    w-full md:w-auto
+    inline-block
+  `;
 
   return (
-    <button 
-      className={baseClasses}
-      style={{ backgroundColor: bgcolor, color: color }}
+    <button
+      type={type}
+      className={buttonClasses}
       onClick={onClick}
     >
       {text}
