@@ -6,9 +6,7 @@ const Hero = () => {
   // Tecnologias  
   const techStack = [
     { icon: <FaReact className="text-blue-400" />, name: 'React.js', bg: 'bg-blue-100' },
-    { icon: <FaReact className="text-green-500" />, name: 'Vue.js', bg: 'bg-green-100' },
-    { icon: <FaReact className="text-red-500" />, name: 'Angular', bg: 'bg-red-100' },
-    { icon: <FaNodeJs className="text-green-600" />, name: 'Node.js', bg: 'bg-green-100' },
+    { icon: <FaNodeJs className="text-green-600" />, name: 'Node.js (Básico)', bg: 'bg-green-100' },
     { icon: <SiMongodb className="text-green-700" />, name: 'MongoDB', bg: 'bg-green-100' },
     { icon: <SiFirebase className="text-yellow-500" />, name: 'Firebase', bg: 'bg-yellow-100' },
     { icon: <SiMysql className="text-blue-600" />, name: 'MySQL (TiDB)', bg: 'bg-blue-100' },
@@ -23,8 +21,8 @@ const Hero = () => {
   const stats = [
     { number: '2', label: 'Graduações', icon: <FaGraduationCap /> },
     { number: '5+', label: 'Anos experiência', icon: <FaBriefcase /> },
-    { number: '12+', label: 'Tecnologias', icon: <FaFire /> },
-    { number: '3', label: 'Certificações', icon: <FaDatabase /> },
+    { number: '10+', label: 'Tecnologias', icon: <FaFire /> },
+    { number: '3', label: 'Conhecimentos', icon: <FaDatabase /> },
   ];
 
   return (
@@ -38,22 +36,21 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
               <FaGraduationCap className="text-blue-600" />
               <span className="text-sm font-medium text-gray-700">
-                Pós-graduado em Frontend (React, Vue, Angular)
+                Pós-graduando em Frontend com React
               </span>
             </div>
 
             {/* Título principal */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Desenvolvedor{' '}
+              Desenvolvedor Frontend{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Full Stack
+                + Backend Básico
               </span>
             </h1>
 
             {/* Descrição profissional */}
             <p className="text-xl text-gray-600 max-w-2xl">
-              Administrador de formação com pós-graduação em desenvolvimento frontend. 
-              Especialista em criar soluções completas com React, Node.js, Firebase e bancos de dados.
+              Pós-graduando em desenvolvimento frontend, focado em criar interfaces ricas com React e com conhecimento em Node.js (Básico) para APIs.
             </p>
 
             {/* Stack de tecnologias em badges */}
@@ -68,7 +65,7 @@ const Hero = () => {
                 </span>
               ))}
               <span className="inline-flex items-center px-3 py-1.5 bg-gray-200 text-gray-700 rounded-full text-sm font-medium">
-                +6 tecnologias
+                +4 tecnologias
               </span>
             </div>
 
@@ -117,8 +114,8 @@ const Hero = () => {
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
                   <div>
-                    <p className="font-medium text-gray-900">Pós-graduação em Frontend</p>
-                    <p className="text-sm text-gray-500">React.js · Vue.js · Angular</p>
+                    <p className="font-medium text-gray-900">Pós-graduando em Frontend</p>
+                    <p className="text-sm text-gray-500">React.js</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -138,13 +135,13 @@ const Hero = () => {
                 Stack Completa
               </h3>
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-gray-50 p-3 rounded-lg">
-                  <p className="text-sm font-medium text-gray-700">Frontend</p>
-                  <p className="text-xs text-gray-500">React · Vue · Angular · Tailwind</p>
+                <div className="bg-blue-100 p-3 rounded-lg">
+                  <p className="text-sm font-medium text-blue-800">Frontend</p>
+                  <p className="text-xs text-gray-500">React · Tailwind</p>
                 </div>
                 <div className="bg-gray-50 p-3 rounded-lg">
                   <p className="text-sm font-medium text-gray-700">Backend</p>
-                  <p className="text-xs text-gray-500">Node.js · API REST · Firebase</p>
+                  <p className="text-xs text-gray-500">Node.js (Básico) · API REST · Firebase</p>
                 </div>
                 <div className="bg-gray-50 p-3 rounded-lg">
                   <p className="text-sm font-medium text-gray-700">Banco de Dados</p>

@@ -30,15 +30,14 @@ const Projetos = () => {
       icon: <CalendarIcon />,
       bgColor: 'bg-purple-600',
       description: 'Sistema de agendamento para prestadores de serviços com notificações e calendário.',
-      technologies: ['React JS', 'Node.js', 'Payment API', 'Firebase'],
-      functionalities: ['Calendário interativo', 'Notificações por email', 'Pagamento online'],
+      technologies: ['React JS', 'Node.js (Básico)', 'Firebase'],
+      functionalities: ['Calendário interativo', 'Notificações por email', 'Cancelamento/remarcação'],
       demoLink: '#',
       modalContent: {
-        detailedDescription: 'Este sistema robusto foi desenvolvido para otimizar a gestão de agendamentos de profissionais autônomos e pequenas empresas. A plataforma oferece uma experiência de usuário fluida, desde a visualização de horários disponíveis até a confirmação e pagamento do serviço, tudo de forma integrada e automatizada.',
+        detailedDescription: 'Este sistema robusto foi desenvolvido para otimizar a gestão de agendamentos de profissionais autônomos e pequenas empresas. A plataforma oferece uma experiência de usuário fluida, desde a visualização de horários disponíveis até a confirmação do serviço, tudo de forma integrada e automatizada.',
         detailedFunctionalities: [
           { title: 'Calendário Interativo', description: 'Permite que os clientes visualizem rapidamente os horários livres e agendem com apenas alguns cliques, evitando conflitos de agenda.' },
           { title: 'Notificações por Email', description: 'Confirmações, lembretes e avisos de cancelamento são enviados automaticamente, reduzindo o não comparecimento (no-show).' },
-          { title: 'Pagamento Online', description: 'Integração com APIs de pagamento para garantir a reserva do horário, oferecendo segurança para o profissional e o cliente.' },
           { title: 'Cancelamento/Remarcação Flexível', description: 'Regras de negócio personalizáveis para cancelamentos e remarcações, dando autonomia ao usuário dentro de limites pré-definidos.' },
         ]
       }
@@ -47,14 +46,13 @@ const Projetos = () => {
       title: 'Blog Platform',
       icon: <BlogIcon />,
       bgColor: 'bg-green-500',
-      description: 'Plataforma de blog com editor de texto rico, comentários e dashboard administrativo.',
-      technologies: ['JavaScript', 'Node.js', 'REST API', 'Firebase'],
-      functionalities: ['Editor de texto rico', 'Sistema de comentários', 'Categorias e tags'],
+      description: 'Plataforma de blog com sistema de comentários e dashboard administrativo.',
+      technologies: ['JavaScript', 'Node.js (Básico)', 'REST API', 'Firebase'],
+      functionalities: ['Sistema de comentários', 'Categorias e tags', 'Dashboard'],
       demoLink: '#',
       modalContent: {
-        detailedDescription: 'Uma plataforma completa para criação e gerenciamento de conteúdo. O projeto foi pensado para ser intuitivo para o escritor e administrador, com um editor de texto que facilita a formatação e um painel de controle que centraliza a moderação de comentários e a organização do conteúdo.',
+        detailedDescription: 'Uma plataforma completa para criação e gerenciamento de conteúdo. O projeto foi pensado para ser intuitivo para o escritor e administrador, com um painel de controle que centraliza a moderação de comentários e a organização do conteúdo.',
         detailedFunctionalities: [
-          { title: 'Editor de Texto Rico', description: 'Baseado em bibliotecas como Draft.js ou Quill, permite formatação de texto, inserção de imagens e vídeos de forma simples.' },
           { title: 'Sistema de Comentários', description: 'Engaje sua audiência com um sistema de comentários em tempo real, com threads de respostas e moderação.' },
           { title: 'Categorias e Tags', description: 'Organize as publicações de forma lógica e otimizada para SEO, facilitando a navegação do usuário e a descoberta de conteúdo.' },
           { title: 'Dashboard Administrativo', description: 'Um painel central para gerenciar todas as publicações, aprovar comentários, visualizar estatísticas de acesso e gerenciar usuários.' },
@@ -93,8 +91,7 @@ const Projetos = () => {
 
   const techColorMap = {
     'React JS': 'bg-blue-200 text-blue-800',
-    'Node.js': 'bg-green-200 text-green-800',
-    'Payment API': 'bg-purple-200 text-purple-800',
+    'Node.js (Básico)': 'bg-green-200 text-green-800',
     'Firebase': 'bg-yellow-200 text-yellow-800',
     'JavaScript': 'bg-yellow-200 text-yellow-800',
     'REST API': 'bg-indigo-200 text-indigo-800',
@@ -102,7 +99,7 @@ const Projetos = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-200">
+    <section className="py-20 bg-gray-200" id="projetos">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">Meus Projetos</h2>
         <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
@@ -129,9 +126,7 @@ const Projetos = () => {
               <h4 className="font-bold text-xl mb-4 text-gray-800">Tecnologias:</h4>
               <div className="flex flex-wrap gap-3 mb-6">
                 {selectedProject.technologies.map(tech => (
-                  <span key={tech} className={`px-4 py-1 text-sm font-semibold rounded-full ${techColorMap[tech] || 'bg-gray-200 text-gray-800'}`}>
-                    {tech}
-                  </span>
+                  <span key={tech} className={`px-4 py-1 text-sm font-semibold rounded-full ${techColorMap[tech] || 'bg-gray-200 text-gray-800'}`}>{tech}</span>
                 ))}
               </div>
 
