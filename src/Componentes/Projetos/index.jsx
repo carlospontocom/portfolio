@@ -4,19 +4,19 @@ import Modal from '../Modal';
 
 // --- Ícones para os Cards ---
 const CalendarIcon = () => (
-    <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
 );
 
 const BlogIcon = () => (
-    <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
 );
 
 const ChecklistIcon = () => (
-    <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
 );
 
 const CheckIcon = () => (
-    <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+  <svg className="w-5 h-0 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
 );
 // ---
 
@@ -104,9 +104,9 @@ const Projetos = () => {
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">Meus Projetos</h2>
         <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
           {projectData.map((project) => (
-            <Card 
-              key={project.title} 
-              {...project} 
+            <Card
+              key={project.title}
+              {...project}
               onSaibaMaisClick={() => handleSaibaMaisClick(project)}
             />
           ))}
@@ -117,12 +117,12 @@ const Projetos = () => {
         {selectedProject && selectedProject.modalContent && (
           <>
             <div className={`p-6 text-white flex items-center rounded-t-lg ${selectedProject.bgColor}`}>
-                <div className="mr-4">{selectedProject.icon}</div>
-                <h3 className="text-3xl font-bold">{selectedProject.title}</h3>
+              <div className="mr-4">{selectedProject.icon}</div>
+              <h3 className="text-3xl font-bold">{selectedProject.title}</h3>
             </div>
             <div className="p-8">
               <p className="text-gray-700 text-lg mb-6">{selectedProject.modalContent.detailedDescription}</p>
-              
+
               <h4 className="font-bold text-xl mb-4 text-gray-800">Tecnologias:</h4>
               <div className="flex flex-wrap gap-3 mb-6">
                 {selectedProject.technologies.map(tech => (
@@ -136,8 +136,8 @@ const Projetos = () => {
                   <li key={func.title} className="flex items-start">
                     <CheckIcon />
                     <div>
-                        <h5 className="font-semibold text-gray-800">{func.title}</h5>
-                        <p className="text-gray-600">{func.description}</p>
+                      <h5 className="font-semibold text-gray-800">{func.title}</h5>
+                      <p className="text-gray-600">{func.description}</p>
                     </div>
                   </li>
                 ))}

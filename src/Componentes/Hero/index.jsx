@@ -19,17 +19,17 @@ const Hero = () => {
 
   // Estatísticas
   const stats = [
-    { number: '2', label: 'Graduações', icon: <FaGraduationCap /> },
-    { number: '5+', label: 'Anos experiência', icon: <FaBriefcase /> },
-    { number: '10+', label: 'Tecnologias', icon: <FaFire /> },
-    { number: '3', label: 'Conhecimentos', icon: <FaDatabase /> },
+    { label: 'Graduado + Lato Sensu', icon: <FaGraduationCap /> },
+    { label: 'Anos experiência', icon: <FaBriefcase /> },
+    { label: 'Tecnologias Baas', icon: <FaFire /> },
+    { label: 'Conhecimentos básico database', icon: <FaDatabase /> },
   ];
 
   return (
     <section id="inicio" className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* Coluna Esquerda - Informações Pessoais */}
           <div className="space-y-6">
             {/* Badge de formação */}
@@ -50,7 +50,7 @@ const Hero = () => {
 
             {/* Descrição profissional */}
             <p className="text-xl text-gray-600 max-w-2xl">
-              Pós-graduando em desenvolvimento frontend, focado em criar interfaces ricas com React e com conhecimento em Node.js (Básico) para APIs.
+              Pós-graduando em desenvolvimento frontend, focado em criar interfaces com React e com conhecimento em Node.js (Básico).
             </p>
 
             {/* Stack de tecnologias em badges */}
@@ -64,12 +64,9 @@ const Hero = () => {
                   {tech.name}
                 </span>
               ))}
-              <span className="inline-flex items-center px-3 py-1.5 bg-gray-200 text-gray-700 rounded-full text-sm font-medium">
-                +4 tecnologias
-              </span>
+
             </div>
 
-            {/* Botões de ação */}
             <div className="flex flex-wrap gap-4 pt-4">
               <a
                 href="#projetos"
@@ -95,16 +92,13 @@ const Hero = () => {
                   className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
                 >
                   <div className="text-2xl text-blue-600 mb-2">{stat.icon}</div>
-                  <div className="text-2xl font-bold text-gray-900">{stat.number}</div>
                   <div className="text-sm text-gray-500">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Coluna Direita - Cards de especialidades */}
           <div className="space-y-6">
-            {/* Card principal - Formação */}
             <div className="bg-white rounded-2xl shadow-xl p-6 border-l-4 border-blue-600">
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
                 <FaGraduationCap className="text-blue-600" />
@@ -115,14 +109,13 @@ const Hero = () => {
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
                   <div>
                     <p className="font-medium text-gray-900">Pós-graduando em Frontend</p>
-                    <p className="text-sm text-gray-500">React.js</p>
+                    <p className="text-sm text-gray-500">Web com React.js</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
                   <div>
                     <p className="font-medium text-gray-900">Graduação em Administração</p>
-                    <p className="text-sm text-gray-500">Gestão · Dados · Processos</p>
                   </div>
                 </div>
               </div>
@@ -165,18 +158,12 @@ const Hero = () => {
                   <span className="text-gray-700">Help Desk & Suporte</span>
                   <span className="text-sm text-gray-500">5+ anos</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-700">Gestão de Dados</span>
-                  <span className="text-sm text-gray-500">Especialista</span>
-                </div>
+
                 <div className="flex items-center justify-between">
                   <span className="text-gray-700">Pacote Office</span>
-                  <span className="text-sm text-gray-500">Avançado</span>
+                  <span className="text-sm text-gray-500">Intermediário</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-700">CRUD e APIs</span>
-                  <span className="text-sm text-gray-500">Completo</span>
-                </div>
+
               </div>
             </div>
 

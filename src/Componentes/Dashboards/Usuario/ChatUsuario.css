@@ -1,0 +1,172 @@
+.chat-wrapper-unico {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+}
+
+/* O Único Botão de abrir o Chat */
+.botao-flutuante-abrir {
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-chat {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.topo-chat {
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.corpo-mensagens {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    background: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.msg-linha {
+    display: flex;
+    width: 100%;
+}
+
+.msg-linha.dir {
+    justify-content: flex-end;
+}
+
+.msg-linha.esq {
+    justify-content: flex-start;
+}
+
+.balao-texto {
+    max-width: 85%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.dir .balao-texto {
+    background: #2563eb;
+    color: white;
+}
+
+.esq .balao-texto {
+    background: white;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.rodape-input {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.campo-texto {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 13px;
+}
+
+/* Botão de Enviar (Apenas o Ícone) */
+.seta-enviar {
+    background: none;
+    border: none;
+    color: #2563eb;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.seta-enviar:hover {
+    color: #1d4ed8;
+}
+
+/* Container de cada linha de mensagem */
+.msg-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    max-width: 85%;
+}
+
+.msg-container.dir {
+    align-self: flex-end;
+    align-items: flex-end;
+    /* Alinha a hora à direita */
+}
+
+.msg-container.esq {
+    align-self: flex-start;
+    align-items: flex-start;
+    /* Alinha a hora à esquerda */
+}
+
+/* O Balão em si */
+.balao-texto {
+    padding: 10px 14px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.dir .balao-texto {
+    background-color: #2563eb;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.esq .balao-texto {
+    background-color: white;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    border-bottom-left-radius: 4px;
+}
+
+/* Estilo da Hora FORA do balão */
+.msg-hora-fora {
+    font-size: 10px;
+    color: #94a3b8;
+    margin-top: 4px;
+    padding: 0 4px;
+    font-weight: 500;
+}

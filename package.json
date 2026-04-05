@@ -11,17 +11,20 @@
     "server": "json-server --watch db.json --port 8000"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "axios": "^1.13.5",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
-    "firebase": "^12.10.0",
+    "emailjs": "^5.0.0",
+    "firebase": "^12.11.0",
     "json-server": "^1.0.0-beta.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.6.0",
     "react-modal": "^3.16.3",
     "react-router-dom": "^7.13.1",
-    "styled-components": "^6.1.19"
+    "styled-components": "^6.1.19",
+    "sweetalert2": "^11.26.24"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

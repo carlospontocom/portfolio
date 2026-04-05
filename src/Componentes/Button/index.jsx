@@ -13,8 +13,8 @@ const Button = ({ text, onClick, type = 'button' }) => {
     transform transition-all duration-300
     focus:outline-none
     focus:ring-4 focus:ring-purple-300
-    w-full md:w-auto
-    inline-block
+    w-full
+    block
   `;
 
   return (

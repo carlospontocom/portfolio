@@ -15,7 +15,7 @@ const Textarea = ({ label, placeholder, value, onChange, error, name }) => {
         name={name}
         className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-none ${errorClass}`}
       />
-      <div className="h-5 mt-1">
+      <div className="h-0 mt-1">
         {error && <p className="text-red-500 text-xs italic">{error}</p>}
       </div>
     </div>
