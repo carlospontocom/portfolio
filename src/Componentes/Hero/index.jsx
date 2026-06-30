@@ -50,7 +50,7 @@ const Hero = () => {
 
             {/* Descrição profissional */}
             <p className="text-xl text-gray-600 max-w-2xl">
-              Pós-graduando em desenvolvimento frontend, focado em criar interfaces com React e com conhecimento em Node.js (Básico).
+              Pós-gradudo em desenvolvimento frontend, focado em criar interfaces - React e Vue - conhecimento em Node.js (Básico).
             </p>
 
             {/* Stack de tecnologias em badges */}
