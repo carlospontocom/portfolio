@@ -30,7 +30,7 @@ const Projetos = () => {
       icon: <CalendarIcon />,
       bgColor: 'bg-purple-600',
       description: 'Sistema de agendamento para prestadores de serviços com notificações e calendário.',
-      technologies: ['React JS', 'Node.js (Básico)', 'Firebase'],
+      technologies: ['ReactJS','VueJS', 'Node.js (Básico)', 'Firebase'],
       functionalities: ['Calendário interativo', 'Notificações por email', 'Cancelamento/remarcação'],
       demoLink: '#',
       modalContent: {
@@ -64,7 +64,7 @@ const Projetos = () => {
       icon: <ChecklistIcon />,
       bgColor: 'bg-blue-500',
       description: 'Aplicativo de checklist para tarefas diárias com autenticação e sincronização em tempo real.',
-      technologies: ['React JS', 'Firebase', 'Auth API'],
+      technologies: ['ReactJS','VueJS', 'Firebase', 'Auth API'],
       functionalities: ['Login com Google/Facebook', 'Listas personalizadas', 'Sincronização em tempo real'],
       demoLink: '#',
       modalContent: {

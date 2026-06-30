@@ -5,7 +5,7 @@ import { SiMongodb, SiTailwindcss, SiFirebase, SiMysql, SiRender, SiVercel } fro
 const Hero = () => {
   // Tecnologias  
   const techStack = [
-    { icon: <FaReact className="text-blue-400" />, name: 'React.js', bg: 'bg-blue-100' },
+    { icon: <FaReact className="text-blue-400" />, name: 'React.js & Vue.js', bg: 'bg-blue-100' },
     { icon: <FaNodeJs className="text-green-600" />, name: 'Node.js (Básico)', bg: 'bg-green-100' },
     { icon: <SiMongodb className="text-green-700" />, name: 'MongoDB', bg: 'bg-green-100' },
     { icon: <SiFirebase className="text-yellow-500" />, name: 'Firebase', bg: 'bg-yellow-100' },
@@ -108,8 +108,8 @@ const Hero = () => {
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
                   <div>
-                    <p className="font-medium text-gray-900">Pós-graduando em Frontend</p>
-                    <p className="text-sm text-gray-500">Web com React.js</p>
+                    <p className="font-medium text-gray-900">Pós-graduado em Frontend</p>
+                    <p className="text-sm text-gray-500">Web com React.js e Vue.JS</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -157,11 +157,6 @@ const Hero = () => {
                 <div className="flex items-center justify-between">
                   <span className="text-gray-700">Help Desk & Suporte</span>
                   <span className="text-sm text-gray-500">5+ anos</span>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-700">Pacote Office</span>
-                  <span className="text-sm text-gray-500">Intermediário</span>
                 </div>
 
               </div>

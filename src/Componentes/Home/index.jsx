@@ -6,9 +6,9 @@ import Footer from '../Footer';
 
 const Home = () => {
   return (
-    <div className="bg-gray-100 font-sans">
+    <div className="bg-gray- 100 font-sans">
       <Hero />
-      <Projetos />
+      <Projet os />
       <Contato/>
       <Footer/>
     </div>
