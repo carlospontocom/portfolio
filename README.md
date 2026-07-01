@@ -1,4 +1,4 @@
-**Central de Conhecimento e Suporte Inteligente**. Ele reflete as tecnologias que você está usando (React, Firebase, Tailwind) e as funcionalidades presentes nos seus componentes.
+**Central de Conhecimento e Suporte Inteligente**. Ele reflete as tecnologias (React,Vue Firebase, Tailwind, css, ) e as funcionalidades presentes nos seus componentes.
 
 ---
 
