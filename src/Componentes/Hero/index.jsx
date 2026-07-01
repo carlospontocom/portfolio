@@ -36,7 +36,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
               <FaGraduationCap className="text-blue-600" />
               <span className="text-sm font-medium text-gray-700">
-                Pós-graduando em Frontend com React
+                Pós-graduado em Frontend Vuejs e React
               </span>
             </div>
 
