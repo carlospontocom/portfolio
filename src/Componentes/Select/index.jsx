@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Select = ({ label, options, value, onChange, error, name }) => {
-  const errorClass = error ? 'border-red-500' : 'border-gray-200';
+  
 
   return (
     <div className="mb-4">
