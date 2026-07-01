@@ -70,9 +70,9 @@ const Login = () => {
         <section className="flex items-center justify-center h-screen bg-slate-50 px-4 pt-[2rem]">
             <form
                 onSubmit={manipularLogin}
-                className="bg-green-400"
+                className="bg-white rounded px-2"
             >
-                <div className="mb-8 text-center">
+                <div className="mb-5 text-center">
                     <h1 className="text-3xl font-black text-slate-800 tracking-tight">
                         Bem-vindo
                     </h1>
@@ -81,7 +81,7 @@ const Login = () => {
                     </p>
 
                     {erro && (
-                        <div className="mt-4 p-2 bg-red-50 text-red-600 border border-red-100 rounded text-xs font-bold animate-pulse">
+                        <div className="mt-2 p-2 bg-red-50 text-red-600 border border-red-100 rounded text-xs font-bold animate-pulse">
                             ⚠️ {erro}
                         </div>
                     )}
