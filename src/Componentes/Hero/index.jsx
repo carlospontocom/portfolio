@@ -22,7 +22,7 @@ const Hero = () => {
     { label: 'Graduado + Lato Sensu', icon: <FaGraduationCap /> },
     { label: 'Anos experiência', icon: <FaBriefcase /> },
     { label: 'Tecnologias Baas', icon: <FaFire /> },
-    { label: 'Conhecimentos básico database', icon: <FaDatabase /> },
+    { label: 'Banco de dados', icon: <FaDatabase /> },
   ];
 
   return (
@@ -36,7 +36,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
               <FaGraduationCap className="text-blue-600" />
               <span className="text-sm font-medium text-gray-700">
-                Pós-graduado em Frontend Vuejs e React
+                Frontend Vuejs e ReactJs
               </span>
             </div>
 
@@ -50,7 +50,7 @@ const Hero = () => {
 
             {/* Descrição profissional */}
             <p className="text-xl text-gray-600 max-w-2xl">
-              Pós-gradudo em desenvolvimento frontend, focado em criar interfaces - React e Vue - conhecimento em Node.js (Básico).
+              Pós-graduado em desenvolvimento frontend, focado em criar interfaces com Vue e React, conhecimento em fullStack com node.JS
             </p>
 
             {/* Stack de tecnologias em badges */}
