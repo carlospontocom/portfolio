@@ -13,7 +13,7 @@ const Select = ({ label, options, value, onChange, error, name }) => {
         onChange={onChange}
         name={name}
         // aqui aqui
-        className="bg-red-400"
+        className="bg-gray-100 py-4 px-3 shadow appearance-none border rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       >
         {options.map((option, index) => (
           <option key={index} value={option.value || option}>
