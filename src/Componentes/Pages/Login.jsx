@@ -70,7 +70,7 @@ const Login = () => {
         <section className="flex items-center justify-center h-screen bg-slate-50 px-4 pt-[2rem]">
             <form
                 onSubmit={manipularLogin}
-                className="bg-white p-10 rounded-2xl shadow-xl w-full max-w-sm border border-slate-100"
+                className="bg-green-400"
             >
                 <div className="mb-8 text-center">
                     <h1 className="text-3xl font-black text-slate-800 tracking-tight">
