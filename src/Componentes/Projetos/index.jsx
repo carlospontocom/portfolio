@@ -103,7 +103,6 @@ const Projetos = () => {
     <section className={styles.containerProjeto} id="projetos">
       <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">Meus Projetos</h2>
       <div className={styles.grid}>
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
           {projectData.map((project) => (
             <Card
               key={project.title}
@@ -112,7 +111,6 @@ const Projetos = () => {
             />
           ))}
         </div>
-      </div>
 
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
         {selectedProject && selectedProject.modalContent && (
