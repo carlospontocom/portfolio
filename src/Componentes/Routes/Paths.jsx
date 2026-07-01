@@ -5,6 +5,7 @@ import Home from '../Home/index.jsx';
 import Header from '../Header/index.jsx';
 import DashboardUsuario from '../Dashboards/Usuario/DashboardUsuario.jsx';
 import Administrativo from '../Dashboards/Admin/Administrativo.jsx';
+import FormEmailRecorverSenha from '../FormEmailRecorverSenha/index.jsx';
 
 const Paths = () => (
   <BrowserRouter>
@@ -13,8 +14,10 @@ const Paths = () => (
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/cadastro" element={<Cadastro />} />
+      <Route path="/formEmailRecorverSenha" element={<FormEmailRecorverSenha />} />
       <Route path="/dashboard/usuario" element={<DashboardUsuario />} />
       <Route path="/dashboard/admin" element={<Administrativo />} />
+      <Route path="*" element={<h1>Página não encontrada</h1>} />
     </Routes>
   </BrowserRouter>
 );

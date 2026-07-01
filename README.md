@@ -4,7 +4,7 @@
 
 # 🛡️ Central de Conhecimento Inteligente
 
-Uma plataforma completa de autoatendimento e suporte em tempo real, composta por um **Dashboard de Usuário** com busca inteligente e um **Painel Administrativo** para curadoria de conteúdo e chat de suporte.
+É uma base de dados para usuários buscarem informações sobre processos e atividades, voltada para 
 
 ## 🚀 Funcionalidades
 
@@ -20,7 +20,7 @@ Uma plataforma completa de autoatendimento e suporte em tempo real, composta por
 * **Central de Mensagens (Omnichannel):** Sistema de chat para atender múltiplos usuários simultaneamente com notificações de novas mensagens.
 * **Paginação e Filtros:** Organização eficiente de grandes volumes de dados de suporte.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas   (frontend + BaaS)
 
 * **Frontend:** [React.js](https://reactjs.org/) (Hooks, Context, Router v6)
 * **Estilização:** [Tailwind CSS](https://tailwindcss.com/) & CSS Modules

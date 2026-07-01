@@ -70,7 +70,7 @@ const Login = () => {
         <section className="flex items-center justify-center bg-slate-50 px-4 py-[5rem]">
             <form
                 onSubmit={manipularLogin}
-                className="bg-white rounded px-4 py-8 shadow"
+                className="bg-white shadow-md rounded w-[400px] p-4"
             >
                 <div className="mb-5 text-center">
                     <h1 className="text-3xl font-black text-slate-800 tracking-tight">
@@ -116,6 +116,8 @@ const Login = () => {
                 </div>
 
                 <div className="mt-6 text-center">
+                    <p className="text-xs text-slate-400"><span className="text-indigo-600 font-bold cursor-pointer hover:underline" onClick={() => navigate('/formEmailRecorverSenha')}>Recuperar senha</span>
+                    </p>
                     <p className="text-xs text-slate-400">
                         Não tem uma conta? <span className="text-indigo-600 font-bold cursor-pointer hover:underline" onClick={() => navigate('/cadastro')}>Cadastre-se</span>
                     </p>
@@ -130,6 +132,3 @@ const Login = () => {
 };
 
 export default Login;
-
-//suporte.tecnico.cn@gmail ... timtim12@
-//intablete@gmail.com ... timtim
