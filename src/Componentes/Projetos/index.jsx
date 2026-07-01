@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from '../Card';
 import Modal from '../Modal';
+import styles from './projeto.module.css';
 
 // --- Ícones para os Cards ---
 const CalendarIcon = () => (
@@ -99,7 +100,7 @@ const Projetos = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-200" id="projetos">
+    <section className={styles.containerProjeto} id="projetos">
       <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8">
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">Meus Projetos</h2>
         <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
