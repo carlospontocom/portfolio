@@ -22,6 +22,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      # 🔧 FORÇA A INSTALAÇÃO DO TAILWIND
+      - name: Verify and force install Tailwind
+        run: |
+          echo "🔍 Verificando instalação do Tailwind..."
+          npm list tailwindcss @tailwindcss/vite || echo "⚠️ Tailwind não encontrado, instalando..."
+          npm install tailwindcss @tailwindcss/vite --save-dev
+          echo "✅ Tailwind instalado:"
+          npm list tailwindcss @tailwindcss/vite
+      
       # 🔑 Cria o .env com os Secrets
       - name: Create .env file
         run: |
@@ -36,8 +45,30 @@ jobs:
           echo "VITE_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}" >> .env
           echo "VITE_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}" >> .env
       
-      - name: Build project
-        run: npm run build
+      # 🔍 DIAGNÓSTICO - Verifica o que foi gerado
+      - name: Debug build output
+        run: |
+          echo "📁 Arquivos gerados no build:"
+          ls -la dist/
+          echo ""
+          echo "📄 Verificando CSS:"
+          if ls dist/assets/*.css 2>/dev/null; then
+            echo "✅ CSS encontrado!"
+            ls -la dist/assets/*.css
+          else
+            echo "❌ NENHUM CSS encontrado!"
+          fi
+          echo ""
+          echo "📄 Verificando JS:"
+          if ls dist/assets/*.js 2>/dev/null; then
+            echo "✅ JS encontrado!"
+            ls -la dist/assets/*.js
+          else
+            echo "❌ NENHUM JS encontrado!"
+          fi
+          echo ""
+          echo "📄 Primeiras 30 linhas do index.html:"
+          head -30 dist/index.html
       
       - name: Force new deployment
         run: echo "Deployed at $(date +%s)" > dist/version.txt
@@ -65,6 +96,6 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0.10.0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO }}'  # ← CORRIGIDO!
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO }}'
           projectId: app-vuets
           channelId: live
