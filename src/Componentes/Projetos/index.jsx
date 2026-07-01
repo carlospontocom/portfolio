@@ -27,57 +27,72 @@ const Projetos = () => {
 
   const projectData = [
     {
-      title: 'Agendamento Online',
+      title: 'Cadastro e login',
       icon: <CalendarIcon />,
       bgColor: 'bg-purple-600',
-      description: 'Sistema de agendamento para prestadores de serviços com notificações e calendário.',
-      technologies: ['ReactJS','VueJS', 'Node.js (Básico)', 'Firebase'],
-      functionalities: ['Calendário interativo', 'Notificações por email', 'Cancelamento/remarcação'],
+      description: 'Sistema para usuário proder acessar o sistemas e realizar atividades exclusivas e sessões',
+      technologies: ['React JS', 'Firebase'],
+      functionalities: ['Acesso restrito', 'Recuperação de senha por login', 'Criação de conta', 'Gerenciador de acesso'],
       demoLink: '#',
       modalContent: {
-        detailedDescription: 'Este sistema robusto foi desenvolvido para otimizar a gestão de agendamentos de profissionais autônomos e pequenas empresas. A plataforma oferece uma experiência de usuário fluida, desde a visualização de horários disponíveis até a confirmação do serviço, tudo de forma integrada e automatizada.',
+        detailedDescription: 'Sistema robusto foi desenvolvido para otimizar a gestão de usuários, para usuário acessar seu dashboard e ter acesso exclusivo aos serviços de sistemas',
         detailedFunctionalities: [
-          { title: 'Calendário Interativo', description: 'Permite que os clientes visualizem rapidamente os horários livres e agendem com apenas alguns cliques, evitando conflitos de agenda.' },
+          { title: 'Login Interativo', description: 'Permite que os clientes acessam rapidamente sua área de acesso para poder gerenciar suas atividades internas no sistema' },
           { title: 'Notificações por Email', description: 'Confirmações, lembretes e avisos de cancelamento são enviados automaticamente, reduzindo o não comparecimento (no-show).' },
           { title: 'Cancelamento/Remarcação Flexível', description: 'Regras de negócio personalizáveis para cancelamentos e remarcações, dando autonomia ao usuário dentro de limites pré-definidos.' },
         ]
       }
     },
     {
-      title: 'Blog Platform',
+      title: 'Chat',
       icon: <BlogIcon />,
       bgColor: 'bg-green-500',
-      description: 'Plataforma de blog com sistema de comentários e dashboard administrativo.',
-      technologies: ['JavaScript', 'Node.js (Básico)', 'REST API', 'Firebase'],
-      functionalities: ['Sistema de comentários', 'Categorias e tags', 'Dashboard'],
+      description: 'Plataforma de comunicação para clientes e administradores ou um sistema SAC',
+      technologies: ['JavaScript', 'REST API', 'Firebase'],
+      functionalities: ['Sistema de comunicação online', 'Atendimento ao cliente', 'Gestor de dúvidas'],
       demoLink: '#',
       modalContent: {
-        detailedDescription: 'Uma plataforma completa para criação e gerenciamento de conteúdo. O projeto foi pensado para ser intuitivo para o escritor e administrador, com um painel de controle que centraliza a moderação de comentários e a organização do conteúdo.',
+        detailedDescription: 'Uma plataforma completa para comunicação online entre clientes, parceiros e administradores. O projeto pode pensado para centralizar a comunicação e exclarecimento sobre assuntos relacionados ao tipo de sistemas, é flexível e totalmente prático.',
         detailedFunctionalities: [
-          { title: 'Sistema de Comentários', description: 'Engaje sua audiência com um sistema de comentários em tempo real, com threads de respostas e moderação.' },
-          { title: 'Categorias e Tags', description: 'Organize as publicações de forma lógica e otimizada para SEO, facilitando a navegação do usuário e a descoberta de conteúdo.' },
-          { title: 'Dashboard Administrativo', description: 'Um painel central para gerenciar todas as publicações, aprovar comentários, visualizar estatísticas de acesso e gerenciar usuários.' },
+          { title: 'Sistema de contatos', description: 'Engaje sua seus clientes com uma comunicação em tempo real, parceiros, clientes e outros.' },
+          { title: 'Chat e Sac', description: 'Faça contato com os envolvidos nos processos da sua empresa, de forma centralizada e para reclarecimento em tempop real.' },
+          { title: 'Dashboard com lista de contatos', description: 'Um painel central para gerenciar todas as comunicações, contatos e para visualizar usuários que enviaram ou podem ser contactados e com aviso de mensagens.' },
         ]
       }
     },
+
+
+
     {
       title: 'Checklist App',
       icon: <ChecklistIcon />,
       bgColor: 'bg-blue-500',
-      description: 'Aplicativo de checklist para tarefas diárias com autenticação e sincronização em tempo real.',
-      technologies: ['ReactJS','VueJS', 'Firebase', 'Auth API'],
-      functionalities: ['Login com Google/Facebook', 'Listas personalizadas', 'Sincronização em tempo real'],
+      description: 'Gerenciador de rotina empresarial',
+      technologies: ['React', 'Node.js', 'Firebase'], // Ajustado para refletir as tecnologias citadas (Firestore/Auth são do Firebase) e o termo Fullstack
+      functionalities: ['Sistema de login', 'Painel administrativo', 'Gerenciador de tarefas', 'Sincronização em tempo real', 'Gestor de clientes'],
       demoLink: '#',
       modalContent: {
-        detailedDescription: 'Focado na produtividade, este aplicativo ajuda usuários a organizar suas tarefas diárias de forma eficiente. Com a sincronização em tempo real do Firebase, as listas de tarefas estão sempre atualizadas em todos os dispositivos. A autenticação social simplifica o processo de login.',
+        detailedDescription: 'Gestão empresarial ao integrar um sistema de login seguro a um painel administrativo analítico. A solução otimiza fluxos de trabalho através de um gerenciador de tarefas e um CRM de clientes, ambos atualizados via sincronização em tempo real.',
         detailedFunctionalities: [
-          { title: 'Login Social (Google/Facebook)', description: 'Integração com Firebase Auth para um processo de login rápido e seguro, sem a necessidade de criar novas senhas.' },
-          { title: 'Listas Personalizadas', description: 'Crie, edite e organize múltiplas listas de tarefas para diferentes contextos (trabalho, pessoal, estudos).' },
-          { title: 'Sincronização em Tempo Real', description: 'Utilizando o Firestore, qualquer alteração em uma lista é instantaneamente refletida em todos os dispositivos logados.' },
-          { title: 'Modo Offline', description: 'O aplicativo permite a visualização e edição de tarefas mesmo sem conexão com a internet, sincronizando as alterações assim que a conexão for restabelecida.' },
+          {
+            title: 'Login Social Integrado',
+            description: 'Autenticação rápida e segura via Firebase Auth (Google/Facebook), simplificando o acesso dos colaboradores com altos padrões de proteção de dados.'
+          },
+          {
+            title: 'Gestão Avançada de Demandas',
+            description: 'Criação e organização de fluxos de trabalho e listas de tarefas segmentadas por projetos, departamentos ou contas específicas de clientes.'
+          },
+          {
+            title: 'Sincronização em Tempo Real',
+            description: 'Utilizando o Firestore, qualquer alteração em uma lista é instantaneamente refletida em todos os dispositivos logados e no painel administrativo.'
+          },
+          {
+            title: 'Modo Offline e Resiliência',
+            description: 'Permite a consulta e edição de dados operacionais mesmo sem conexão com a internet, sincronizando tudo automaticamente com o servidor assim que a rede for restabelecida.'
+          }
         ]
       }
-    },
+    }
   ];
 
   const handleSaibaMaisClick = (project) => {
@@ -103,14 +118,14 @@ const Projetos = () => {
     <section className={styles.containerProjeto} id="projetos">
       <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">Meus Projetos</h2>
       <div className={styles.grid}>
-          {projectData.map((project) => (
-            <Card
-              key={project.title}
-              {...project}
-              onSaibaMaisClick={() => handleSaibaMaisClick(project)}
-            />
-          ))}
-        </div>
+        {projectData.map((project) => (
+          <Card
+            key={project.title}
+            {...project}
+            onSaibaMaisClick={() => handleSaibaMaisClick(project)}
+          />
+        ))}
+      </div>
 
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
         {selectedProject && selectedProject.modalContent && (
