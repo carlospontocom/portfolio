@@ -1,0 +1,16 @@
+name: Reset to Stable Version
+
+on:
+  workflow_dispatch:  # Executa manualmente
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: '8d1d0e5'  # Commit estável
+      
+      - name: Force push to main
+        run: |
+          git push origin +HEAD:main --force
