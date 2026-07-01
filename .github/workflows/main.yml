@@ -22,8 +22,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      # 🔧 FORÇA A INSTALAÇÃO DO TAILWIND
-      - name: Verify and force install Tailwind
+      # 🔍 DIAGNÓSTICO - Verifica o ambiente
+      - name: Debug environment
+        run: |
+          echo "📦 Node version:"
+          node --version
+          echo ""
+          echo "📦 NPM version:"
+          npm --version
+          echo ""
+          echo "📦 Scripts disponíveis:"
+          cat package.json | grep -A 10 '"scripts"'
+          echo ""
+          echo "📦 Dependências instaladas:"
+          npm list --depth=0 || echo "⚠️ Erro ao listar dependências"
+          echo ""
+          echo "📁 Conteúdo da raiz:"
+          ls -la
+      
+      # 🔧 GARANTE A INSTALAÇÃO DO TAILWIND E VITE
+      - name: Ensure Tailwind and Vite are installed
         run: |
           echo "🔍 Verificando instalação do Tailwind..."
           npm list tailwindcss @tailwindcss/vite || echo "⚠️ Tailwind não encontrado, instalando..."
@@ -45,30 +63,55 @@ jobs:
           echo "VITE_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}" >> .env
           echo "VITE_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}" >> .env
       
-      # 🔍 DIAGNÓSTICO - Verifica o que foi gerado
+      # 🔍 Verifica se o .env foi criado
+      - name: Check .env file
+        run: |
+          echo "🔍 Verificando .env:"
+          if [ -f ".env" ]; then
+            echo "✅ .env criado com sucesso!"
+            echo "📋 Variáveis definidas:"
+            cat .env | cut -d'=' -f1
+          else
+            echo "❌ .env NÃO foi criado!"
+            exit 1
+          fi
+      
+      - name: Build project
+        run: npm run build
+      
+      # 🔍 DIAGNÓSTICO - Verifica o build
       - name: Debug build output
         run: |
-          echo "📁 Arquivos gerados no build:"
-          ls -la dist/
-          echo ""
-          echo "📄 Verificando CSS:"
-          if ls dist/assets/*.css 2>/dev/null; then
-            echo "✅ CSS encontrado!"
-            ls -la dist/assets/*.css
+          echo "🔍 Verificando se a pasta dist foi criada:"
+          if [ -d "dist" ]; then
+            echo "✅ dist existe!"
+            echo "📁 Arquivos gerados no build:"
+            ls -la dist/
+            echo ""
+            echo "📄 Verificando CSS:"
+            if ls dist/assets/*.css 2>/dev/null; then
+              echo "✅ CSS encontrado!"
+              ls -la dist/assets/*.css
+            else
+              echo "❌ NENHUM CSS encontrado!"
+            fi
+            echo ""
+            echo "📄 Verificando JS:"
+            if ls dist/assets/*.js 2>/dev/null; then
+              echo "✅ JS encontrado!"
+              ls -la dist/assets/*.js
+            else
+              echo "❌ NENHUM JS encontrado!"
+            fi
+            echo ""
+            echo "📄 Primeiras 30 linhas do index.html:"
+            head -30 dist/index.html
           else
-            echo "❌ NENHUM CSS encontrado!"
+            echo "❌ dist NÃO existe!"
+            echo "📁 Conteúdo da raiz:"
+            ls -la
+            exit 1
           fi
-          echo ""
-          echo "📄 Verificando JS:"
-          if ls dist/assets/*.js 2>/dev/null; then
-            echo "✅ JS encontrado!"
-            ls -la dist/assets/*.js
-          else
-            echo "❌ NENHUM JS encontrado!"
-          fi
-          echo ""
-          echo "📄 Primeiras 30 linhas do index.html:"
-          head -30 dist/index.html
       
       - name: Force new deployment
         run: echo "Deployed at $(date +%s)" > dist/version.txt
