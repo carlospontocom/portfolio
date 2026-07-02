@@ -116,7 +116,7 @@ const Login = () => {
                 </div>
 
                 <div className="mt-6 text-center">
-                    <p className="text-xs text-slate-400"><span className="text-indigo-600 font-bold cursor-pointer hover:underline" onClick={() => navigate('/formEmailRecorverSenha')}>Recuperar senha</span>
+                    <p className="text-xs text-slate-400 pb-2"><span className="text-indigo-600 font-bold cursor-pointer hover:underline" onClick={() => navigate('/formEmailRecorverSenha')}>Recuperar senha</span>
                     </p>
                     <p className="text-xs text-slate-400">
                         Não tem uma conta? <span className="text-indigo-600 font-bold cursor-pointer hover:underline" onClick={() => navigate('/cadastro')}>Cadastre-se</span>
